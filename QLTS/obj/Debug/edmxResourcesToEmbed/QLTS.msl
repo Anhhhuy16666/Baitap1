@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLModelStoreContainer" CdmEntityContainer="QLEntities">
+    <EntitySetMapping Name="THISINHs">
+      <EntityTypeMapping TypeName="QLModel.THISINH">
+        <MappingFragment StoreEntitySet="THISINH">
+          <ScalarProperty Name="MAHS" ColumnName="MAHS" />
+          <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
+          <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+          <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+          <ScalarProperty Name="SBD" ColumnName="SBD" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="MAHUYEN" ColumnName="MAHUYEN" />
+          <ScalarProperty Name="MATINH" ColumnName="MATINH" />
+          <ScalarProperty Name="MATRUONG" ColumnName="MATRUONG" />
+          <ScalarProperty Name="MANGANH" ColumnName="MANGANH" />
+          <ScalarProperty Name="MAKVUT" ColumnName="MAKVUT" />
+          <ScalarProperty Name="MADTUT" ColumnName="MADTUT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="THISINH_SelectAll" FunctionName="QLModel.Store.THISINH_SelectAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLModel.THISINH_SelectAll_Result">
+          <ScalarProperty Name="MAHS" ColumnName="MAHS" />
+          <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
+          <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+          <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+          <ScalarProperty Name="SBD" ColumnName="SBD" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="MAHUYEN" ColumnName="MAHUYEN" />
+          <ScalarProperty Name="MATINH" ColumnName="MATINH" />
+          <ScalarProperty Name="MATRUONG" ColumnName="MATRUONG" />
+          <ScalarProperty Name="MANGANH" ColumnName="MANGANH" />
+          <ScalarProperty Name="MAKVUT" ColumnName="MAKVUT" />
+          <ScalarProperty Name="MADTUT" ColumnName="MADTUT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="THISINH_Delete" FunctionName="QLModel.Store.THISINH_Delete" />
+    <FunctionImportMapping FunctionImportName="THISINh_Insert" FunctionName="QLModel.Store.THISINh_Insert" />
+    <FunctionImportMapping FunctionImportName="THISINH_Update" FunctionName="QLModel.Store.THISINH_Update" />
+    <EntitySetMapping Name="HUYENs">
+      <EntityTypeMapping TypeName="QLModel.HUYEN">
+        <MappingFragment StoreEntitySet="HUYEN">
+          <ScalarProperty Name="MATINH" ColumnName="MATINH" />
+          <ScalarProperty Name="TENHUYEN" ColumnName="TENHUYEN" />
+          <ScalarProperty Name="MAHUYEN" ColumnName="MAHUYEN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="HUYEN_Delete" FunctionName="QLModel.Store.HUYEN_Delete" />
+    <FunctionImportMapping FunctionImportName="HUYEN_Insert" FunctionName="QLModel.Store.HUYEN_Insert" />
+    <FunctionImportMapping FunctionImportName="HUYEN_SelectAll" FunctionName="QLModel.Store.HUYEN_SelectAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLModel.HUYEN_SelectAll_Result">
+          <ScalarProperty Name="MAHUYEN" ColumnName="MAHUYEN" />
+          <ScalarProperty Name="TENHUYEN" ColumnName="TENHUYEN" />
+          <ScalarProperty Name="MATINH" ColumnName="MATINH" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="HUYEN_Update" FunctionName="QLModel.Store.HUYEN_Update" />
+  </EntityContainerMapping>
+</Mapping>

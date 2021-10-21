@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="HUYEN">
+    <Key>
+      <PropertyRef Name="MAHUYEN" />
+    </Key>
+    <Property Name="MAHUYEN" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TENHUYEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="MATINH" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="THISINH">
+    <Key>
+      <PropertyRef Name="MAHS" />
+    </Key>
+    <Property Name="MAHS" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="HOTEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="NGAYSINH" Type="date" />
+    <Property Name="GIOITINH" Type="bit" />
+    <Property Name="SBD" Type="nvarchar" MaxLength="50" />
+    <Property Name="SDT" Type="nvarchar" MaxLength="50" />
+    <Property Name="MAHUYEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="MATINH" Type="nvarchar" MaxLength="50" />
+    <Property Name="MATRUONG" Type="nvarchar" MaxLength="50" />
+    <Property Name="MANGANH" Type="nvarchar" MaxLength="50" />
+    <Property Name="MAKVUT" Type="nvarchar" MaxLength="50" />
+    <Property Name="MADTUT" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Function Name="HUYEN_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="mahuyen1" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HUYEN_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="mahuyen" Type="nvarchar" Mode="In" />
+    <Parameter Name="tenhuyen" Type="nvarchar" Mode="In" />
+    <Parameter Name="matinh" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HUYEN_SelectAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="HUYEN_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="mahuyen2" Type="nvarchar" Mode="In" />
+    <Parameter Name="tenhuyen2" Type="nvarchar" Mode="In" />
+    <Parameter Name="matinh2" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="THISINH_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="mahs" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="THISINh_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="mahs" Type="nvarchar" Mode="In" />
+    <Parameter Name="hoten" Type="nvarchar" Mode="In" />
+    <Parameter Name="ngaysinh" Type="date" Mode="In" />
+    <Parameter Name="gioitinh" Type="bit" Mode="In" />
+    <Parameter Name="sbd" Type="nvarchar" Mode="In" />
+    <Parameter Name="sdt" Type="nvarchar" Mode="In" />
+    <Parameter Name="mahuyen" Type="nvarchar" Mode="In" />
+    <Parameter Name="matinh" Type="nvarchar" Mode="In" />
+    <Parameter Name="matruong" Type="nvarchar" Mode="In" />
+    <Parameter Name="manganh" Type="nvarchar" Mode="In" />
+    <Parameter Name="makvut" Type="nvarchar" Mode="In" />
+    <Parameter Name="madtut" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="THISINH_SelectAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="THISINH_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="mahss" Type="nvarchar" Mode="In" />
+    <Parameter Name="hotens" Type="nvarchar" Mode="In" />
+    <Parameter Name="ngaysinhs" Type="date" Mode="In" />
+    <Parameter Name="gioitinhs" Type="bit" Mode="In" />
+    <Parameter Name="sbds" Type="nvarchar" Mode="In" />
+    <Parameter Name="sdts" Type="nvarchar" Mode="In" />
+    <Parameter Name="mahuyens" Type="nvarchar" Mode="In" />
+    <Parameter Name="matinhs" Type="nvarchar" Mode="In" />
+    <Parameter Name="matruongs" Type="nvarchar" Mode="In" />
+    <Parameter Name="manganhs" Type="nvarchar" Mode="In" />
+    <Parameter Name="makvuts" Type="nvarchar" Mode="In" />
+    <Parameter Name="madtuts" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="QLModelStoreContainer">
+    <EntitySet Name="HUYEN" EntityType="Self.HUYEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="THISINH" EntityType="Self.THISINH" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

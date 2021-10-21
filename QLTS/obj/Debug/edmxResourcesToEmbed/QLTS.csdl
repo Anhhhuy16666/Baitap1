@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="THISINH">
+    <Key>
+      <PropertyRef Name="MAHS" />
+    </Key>
+    <Property Name="MAHS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="HOTEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NGAYSINH" Type="DateTime" Precision="0" />
+    <Property Name="GIOITINH" Type="Boolean" />
+    <Property Name="SBD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MAHUYEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MATINH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MATRUONG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MANGANH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MAKVUT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MADTUT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="QLEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="THISINHs" EntityType="Self.THISINH" />
+    <FunctionImport Name="THISINH_SelectAll" ReturnType="Collection(QLModel.THISINH_SelectAll_Result)" />
+    <FunctionImport Name="THISINH_Delete">
+      <Parameter Name="mahs" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="THISINh_Insert">
+      <Parameter Name="mahs" Mode="In" Type="String" />
+      <Parameter Name="hoten" Mode="In" Type="String" />
+      <Parameter Name="ngaysinh" Mode="In" Type="DateTime" />
+      <Parameter Name="gioitinh" Mode="In" Type="Boolean" />
+      <Parameter Name="sbd" Mode="In" Type="String" />
+      <Parameter Name="sdt" Mode="In" Type="String" />
+      <Parameter Name="mahuyen" Mode="In" Type="String" />
+      <Parameter Name="matinh" Mode="In" Type="String" />
+      <Parameter Name="matruong" Mode="In" Type="String" />
+      <Parameter Name="manganh" Mode="In" Type="String" />
+      <Parameter Name="makvut" Mode="In" Type="String" />
+      <Parameter Name="madtut" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="THISINH_Update">
+      <Parameter Name="mahss" Mode="In" Type="String" />
+      <Parameter Name="hotens" Mode="In" Type="String" />
+      <Parameter Name="ngaysinhs" Mode="In" Type="DateTime" />
+      <Parameter Name="gioitinhs" Mode="In" Type="Boolean" />
+      <Parameter Name="sbds" Mode="In" Type="String" />
+      <Parameter Name="sdts" Mode="In" Type="String" />
+      <Parameter Name="mahuyens" Mode="In" Type="String" />
+      <Parameter Name="matinhs" Mode="In" Type="String" />
+      <Parameter Name="matruongs" Mode="In" Type="String" />
+      <Parameter Name="manganhs" Mode="In" Type="String" />
+      <Parameter Name="makvuts" Mode="In" Type="String" />
+      <Parameter Name="madtuts" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="HUYENs" EntityType="QLModel.HUYEN" />
+    <FunctionImport Name="HUYEN_Delete">
+      <Parameter Name="mahuyen1" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="HUYEN_Insert">
+      <Parameter Name="mahuyen" Mode="In" Type="String" />
+      <Parameter Name="tenhuyen" Mode="In" Type="String" />
+      <Parameter Name="matinh" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="HUYEN_SelectAll" ReturnType="Collection(QLModel.HUYEN_SelectAll_Result)" />
+    <FunctionImport Name="HUYEN_Update">
+      <Parameter Name="mahuyen2" Mode="In" Type="String" />
+      <Parameter Name="tenhuyen2" Mode="In" Type="String" />
+      <Parameter Name="matinh2" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="THISINH_SelectAll_Result">
+    <Property Type="String" Name="MAHS" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="HOTEN" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="NGAYSINH" Nullable="true" />
+    <Property Type="Boolean" Name="GIOITINH" Nullable="true" />
+    <Property Type="String" Name="SBD" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SDT" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MAHUYEN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MATINH" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MATRUONG" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MANGANH" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MAKVUT" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MADTUT" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="HUYEN">
+    <Key>
+      <PropertyRef Name="MAHUYEN" />
+    </Key>
+    <Property Name="MAHUYEN" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TENHUYEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MATINH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="HUYEN_SelectAll_Result">
+    <Property Type="String" Name="MAHUYEN" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TENHUYEN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MATINH" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>

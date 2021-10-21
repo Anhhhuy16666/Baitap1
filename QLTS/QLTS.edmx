@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="QLModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="HUYEN">
+          <Key>
+            <PropertyRef Name="MAHUYEN" />
+          </Key>
+          <Property Name="MAHUYEN" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TENHUYEN" Type="nvarchar" MaxLength="50" />
+          <Property Name="MATINH" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="THISINH">
+          <Key>
+            <PropertyRef Name="MAHS" />
+          </Key>
+          <Property Name="MAHS" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="HOTEN" Type="nvarchar" MaxLength="50" />
+          <Property Name="NGAYSINH" Type="date" />
+          <Property Name="GIOITINH" Type="bit" />
+          <Property Name="SBD" Type="nvarchar" MaxLength="50" />
+          <Property Name="SDT" Type="nvarchar" MaxLength="50" />
+          <Property Name="MAHUYEN" Type="nvarchar" MaxLength="50" />
+          <Property Name="MATINH" Type="nvarchar" MaxLength="50" />
+          <Property Name="MATRUONG" Type="nvarchar" MaxLength="50" />
+          <Property Name="MANGANH" Type="nvarchar" MaxLength="50" />
+          <Property Name="MAKVUT" Type="nvarchar" MaxLength="50" />
+          <Property Name="MADTUT" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Function Name="HUYEN_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="mahuyen1" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="HUYEN_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="mahuyen" Type="nvarchar" Mode="In" />
+          <Parameter Name="tenhuyen" Type="nvarchar" Mode="In" />
+          <Parameter Name="matinh" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="HUYEN_SelectAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="HUYEN_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="mahuyen2" Type="nvarchar" Mode="In" />
+          <Parameter Name="tenhuyen2" Type="nvarchar" Mode="In" />
+          <Parameter Name="matinh2" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="THISINH_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="mahs" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="THISINh_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="mahs" Type="nvarchar" Mode="In" />
+          <Parameter Name="hoten" Type="nvarchar" Mode="In" />
+          <Parameter Name="ngaysinh" Type="date" Mode="In" />
+          <Parameter Name="gioitinh" Type="bit" Mode="In" />
+          <Parameter Name="sbd" Type="nvarchar" Mode="In" />
+          <Parameter Name="sdt" Type="nvarchar" Mode="In" />
+          <Parameter Name="mahuyen" Type="nvarchar" Mode="In" />
+          <Parameter Name="matinh" Type="nvarchar" Mode="In" />
+          <Parameter Name="matruong" Type="nvarchar" Mode="In" />
+          <Parameter Name="manganh" Type="nvarchar" Mode="In" />
+          <Parameter Name="makvut" Type="nvarchar" Mode="In" />
+          <Parameter Name="madtut" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="THISINH_SelectAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="THISINH_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="mahss" Type="nvarchar" Mode="In" />
+          <Parameter Name="hotens" Type="nvarchar" Mode="In" />
+          <Parameter Name="ngaysinhs" Type="date" Mode="In" />
+          <Parameter Name="gioitinhs" Type="bit" Mode="In" />
+          <Parameter Name="sbds" Type="nvarchar" Mode="In" />
+          <Parameter Name="sdts" Type="nvarchar" Mode="In" />
+          <Parameter Name="mahuyens" Type="nvarchar" Mode="In" />
+          <Parameter Name="matinhs" Type="nvarchar" Mode="In" />
+          <Parameter Name="matruongs" Type="nvarchar" Mode="In" />
+          <Parameter Name="manganhs" Type="nvarchar" Mode="In" />
+          <Parameter Name="makvuts" Type="nvarchar" Mode="In" />
+          <Parameter Name="madtuts" Type="nvarchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="QLModelStoreContainer">
+          <EntitySet Name="HUYEN" EntityType="Self.HUYEN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="THISINH" EntityType="Self.THISINH" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QLModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="THISINH">
+          <Key>
+            <PropertyRef Name="MAHS" />
+          </Key>
+          <Property Name="MAHS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="HOTEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NGAYSINH" Type="DateTime" Precision="0" />
+          <Property Name="GIOITINH" Type="Boolean" />
+          <Property Name="SBD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MAHUYEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MATINH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MATRUONG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MANGANH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MAKVUT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MADTUT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="QLEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="THISINHs" EntityType="Self.THISINH" />
+          <FunctionImport Name="THISINH_SelectAll" ReturnType="Collection(QLModel.THISINH_SelectAll_Result)" />
+          <FunctionImport Name="THISINH_Delete">
+          <Parameter Name="mahs" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="THISINh_Insert">
+            <Parameter Name="mahs" Mode="In" Type="String" />
+            <Parameter Name="hoten" Mode="In" Type="String" />
+            <Parameter Name="ngaysinh" Mode="In" Type="DateTime" />
+            <Parameter Name="gioitinh" Mode="In" Type="Boolean" />
+            <Parameter Name="sbd" Mode="In" Type="String" />
+            <Parameter Name="sdt" Mode="In" Type="String" />
+            <Parameter Name="mahuyen" Mode="In" Type="String" />
+            <Parameter Name="matinh" Mode="In" Type="String" />
+            <Parameter Name="matruong" Mode="In" Type="String" />
+            <Parameter Name="manganh" Mode="In" Type="String" />
+            <Parameter Name="makvut" Mode="In" Type="String" />
+            <Parameter Name="madtut" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="THISINH_Update">
+            <Parameter Name="mahss" Mode="In" Type="String" />
+            <Parameter Name="hotens" Mode="In" Type="String" />
+            <Parameter Name="ngaysinhs" Mode="In" Type="DateTime" />
+            <Parameter Name="gioitinhs" Mode="In" Type="Boolean" />
+            <Parameter Name="sbds" Mode="In" Type="String" />
+            <Parameter Name="sdts" Mode="In" Type="String" />
+            <Parameter Name="mahuyens" Mode="In" Type="String" />
+            <Parameter Name="matinhs" Mode="In" Type="String" />
+            <Parameter Name="matruongs" Mode="In" Type="String" />
+            <Parameter Name="manganhs" Mode="In" Type="String" />
+            <Parameter Name="makvuts" Mode="In" Type="String" />
+            <Parameter Name="madtuts" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="HUYENs" EntityType="QLModel.HUYEN" />
+          <FunctionImport Name="HUYEN_Delete">
+          <Parameter Name="mahuyen1" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="HUYEN_Insert">
+            <Parameter Name="mahuyen" Mode="In" Type="String" />
+            <Parameter Name="tenhuyen" Mode="In" Type="String" />
+            <Parameter Name="matinh" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="HUYEN_SelectAll" ReturnType="Collection(QLModel.HUYEN_SelectAll_Result)" />
+          <FunctionImport Name="HUYEN_Update">
+            <Parameter Name="mahuyen2" Mode="In" Type="String" />
+            <Parameter Name="tenhuyen2" Mode="In" Type="String" />
+            <Parameter Name="matinh2" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="THISINH_SelectAll_Result">
+          <Property Type="String" Name="MAHS" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="HOTEN" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="NGAYSINH" Nullable="true" />
+          <Property Type="Boolean" Name="GIOITINH" Nullable="true" />
+          <Property Type="String" Name="SBD" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="SDT" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="MAHUYEN" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="MATINH" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="MATRUONG" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="MANGANH" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="MAKVUT" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="MADTUT" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <EntityType Name="HUYEN">
+          <Key>
+            <PropertyRef Name="MAHUYEN" />
+          </Key>
+          <Property Name="MAHUYEN" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TENHUYEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MATINH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <ComplexType Name="HUYEN_SelectAll_Result">
+          <Property Type="String" Name="MAHUYEN" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="TENHUYEN" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="MATINH" Nullable="true" MaxLength="50" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QLModelStoreContainer" CdmEntityContainer="QLEntities">
+          <EntitySetMapping Name="THISINHs">
+            <EntityTypeMapping TypeName="QLModel.THISINH">
+              <MappingFragment StoreEntitySet="THISINH">
+                <ScalarProperty Name="MAHS" ColumnName="MAHS" />
+                <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
+                <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+                <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+                <ScalarProperty Name="SBD" ColumnName="SBD" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="MAHUYEN" ColumnName="MAHUYEN" />
+                <ScalarProperty Name="MATINH" ColumnName="MATINH" />
+                <ScalarProperty Name="MATRUONG" ColumnName="MATRUONG" />
+                <ScalarProperty Name="MANGANH" ColumnName="MANGANH" />
+                <ScalarProperty Name="MAKVUT" ColumnName="MAKVUT" />
+                <ScalarProperty Name="MADTUT" ColumnName="MADTUT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="THISINH_SelectAll" FunctionName="QLModel.Store.THISINH_SelectAll">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLModel.THISINH_SelectAll_Result">
+                <ScalarProperty Name="MAHS" ColumnName="MAHS" />
+                <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
+                <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+                <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+                <ScalarProperty Name="SBD" ColumnName="SBD" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="MAHUYEN" ColumnName="MAHUYEN" />
+                <ScalarProperty Name="MATINH" ColumnName="MATINH" />
+                <ScalarProperty Name="MATRUONG" ColumnName="MATRUONG" />
+                <ScalarProperty Name="MANGANH" ColumnName="MANGANH" />
+                <ScalarProperty Name="MAKVUT" ColumnName="MAKVUT" />
+                <ScalarProperty Name="MADTUT" ColumnName="MADTUT" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="THISINH_Delete" FunctionName="QLModel.Store.THISINH_Delete" />
+          <FunctionImportMapping FunctionImportName="THISINh_Insert" FunctionName="QLModel.Store.THISINh_Insert" />
+          <FunctionImportMapping FunctionImportName="THISINH_Update" FunctionName="QLModel.Store.THISINH_Update" />
+          <EntitySetMapping Name="HUYENs">
+            <EntityTypeMapping TypeName="QLModel.HUYEN">
+              <MappingFragment StoreEntitySet="HUYEN">
+                <ScalarProperty Name="MATINH" ColumnName="MATINH" />
+                <ScalarProperty Name="TENHUYEN" ColumnName="TENHUYEN" />
+                <ScalarProperty Name="MAHUYEN" ColumnName="MAHUYEN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="HUYEN_Delete" FunctionName="QLModel.Store.HUYEN_Delete" />
+          <FunctionImportMapping FunctionImportName="HUYEN_Insert" FunctionName="QLModel.Store.HUYEN_Insert" />
+          <FunctionImportMapping FunctionImportName="HUYEN_SelectAll" FunctionName="QLModel.Store.HUYEN_SelectAll">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLModel.HUYEN_SelectAll_Result">
+                <ScalarProperty Name="MAHUYEN" ColumnName="MAHUYEN" />
+                <ScalarProperty Name="TENHUYEN" ColumnName="TENHUYEN" />
+                <ScalarProperty Name="MATINH" ColumnName="MATINH" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="HUYEN_Update" FunctionName="QLModel.Store.HUYEN_Update" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
